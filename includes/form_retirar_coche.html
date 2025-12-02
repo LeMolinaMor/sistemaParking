@@ -1,0 +1,57 @@
+<div class="form-retirar">
+    <h1 class="titulo-retirar">Retirar Coche</h1>
+    <p class="subtitulo-retirar">Complete la información para retirar el vehículo</p>
+    
+    <form action="parking_page.php" method="POST">
+        <input type="hidden" name="operacion" value="retirar">
+        
+        <div class="plaza-grid">
+            <label class="plaza-card plaza-pequena">
+                <input type="radio" name="tipo_plaza" value="pequena" required hidden>
+                <span class="plaza-icono">🟡</span>
+                <h3 class="plaza-titulo">Plaza Pequeña</h3>
+                <p class="plaza-info">Para vehículos compactos</p>
+                <span class="plaza-rango">Plazas 0-9</span>
+            </label>
+            
+            <label class="plaza-card plaza-grande">
+                <input type="radio" name="tipo_plaza" value="grande" hidden>
+                <span class="plaza-icono">🔵</span>
+                <h3 class="plaza-titulo">Plaza Grande</h3>
+                <p class="plaza-info">Para vehículos amplios</p>
+                <span class="plaza-rango">Plazas 0-13</span>
+            </label>
+        </div>
+        
+        <div class="selector-plaza">
+            <h3 class="selector-titulo">Número de Plaza</h3>
+            <div class="input-group">
+                <label class="input-label">Ingrese el número de plaza:</label>
+                <input type="number" name="numero_plaza" class="input-plaza" 
+                       min="0" max="13" placeholder="0" required>
+            </div>
+        </div>
+        
+        <div class="estado-plazas">
+            <div class="contador-plaza">
+                <span class="contador-numero">10</span>
+                <span class="contador-texto">Plazas Pequeñas</span>
+            </div>
+            <div class="contador-plaza">
+                <span class="contador-numero">14</span>
+                <span class="contador-texto">Plazas Grandes</span>
+            </div>
+        </div>
+        
+        <div class="boton-retirar-container">
+            <button type="submit" class="boton-retirar">
+                🚗 Retirar Coche
+            </button>
+        </div>
+        
+        <!-- BOTÓN VOLVER AL MENÚ PRINCIPAL -->
+        <div class="boton-volver-form">
+            <a href="index.php" class="btn">← Volver al Menú Principal</a>
+        </div>
+    </form>
+</div>
