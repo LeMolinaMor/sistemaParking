@@ -1,0 +1,43 @@
+<div class="form-aparcar">
+    <h1 class="titulo-seccion">Aparcar Coche</h1>
+    <p class="subtitulo-seccion">Seleccione el tipo de coche para continuar</p>
+    
+    <form action="parking_page.php" method="POST">
+        <input type="hidden" name="operacion" value="aparcar">
+        
+        <div class="tipo-coche-grid">
+            <label class="tipo-coche-card coche-pequeno">
+                <input type="radio" name="tipo_coche" value="pequeno" required hidden>
+                <span class="tipo-coche-icono">🚗</span>
+                <h3 class="tipo-coche-titulo">Coche Pequeño</h3>
+                <p class="tipo-coche-descripcion">
+                    Aparcará en plaza pequeña preferentemente. 
+                    Si no hay disponibles, usará plaza grande.
+                </p>
+                <span class="tipo-coche-badge">RECOMENDADO</span>
+            </label>
+            
+            <label class="tipo-coche-card coche-grande">
+                <input type="radio" name="tipo_coche" value="grande" hidden>
+                <span class="tipo-coche-icono">🚙</span>
+                <h3 class="tipo-coche-titulo">Coche Grande</h3>
+                <p class="tipo-coche-descripcion">
+                    Solo puede aparcar en plazas grandes. 
+                    Espacio amplio para vehículos de mayor tamaño.
+                </p>
+                <span class="tipo-coche-badge">EXCLUSIVO</span>
+            </label>
+        </div>
+        
+        <div class="boton-accion">
+            <button type="submit" class="boton-aparcar">
+                🅿️ Aparcar Coche
+            </button>
+        </div>
+        
+        <!-- BOTÓN VOLVER AL MENÚ PRINCIPAL -->
+        <div class="boton-volver-form">
+            <a href="index.php" class="btn">← Volver al Menú Principal</a>
+        </div>
+    </form>
+</div>
